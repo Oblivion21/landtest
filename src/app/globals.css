@@ -1,164 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0f6fc;
+  --background: #e8f4fc;
   --foreground: #0a1628;
-  --primary: #0066ff;
-  --primary-light: #3d8bff;
-  --primary-dark: #0052cc;
-  --secondary: #00d4aa;
-  --accent-blue: #00a3ff;
-  --accent-cyan: #00d4ff;
-  --text-muted: #64748b;
-  --card-bg: #ffffff;
-  --card-border: #e2e8f0;
-  --hero-gradient-start: #87ceeb;
-  --hero-gradient-end: #e0f4ff;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-light: var(--primary-light);
-  --color-primary-dark: var(--primary-dark);
-  --color-secondary: var(--secondary);
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-cyan: var(--accent-cyan);
-  --color-text-muted: var(--text-muted);
-  --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Subtle tech pattern background */
-.tech-pattern {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(0, 102, 255, 0.03) 1px, transparent 0);
-  background-size: 40px 40px;
-}
-
-/* Float animation for hero cards */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 5s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-.animate-float-slow {
-  animation: float-slow 6s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-float-delayed,
-  .animate-float-slow {
-    animation: none;
-  }
-}
-
-/* Hero frame shape */
-.hero-frame {
-  border-radius: 40px 40px 200px 200px / 40px 40px 100px 100px;
-  background: linear-gradient(180deg, #87ceeb 0%, #a8d8f0 30%, #c8e8f7 60%, #e8f7fc 100%);
-}
-
-/* Glassmorphism card effect */
-.glass-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Star flare effect */
-.star-flare {
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(0, 180, 255, 0.3) 30%, transparent 70%);
-  filter: blur(1px);
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+* {
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Selection color */
-::selection {
-  background: rgba(0, 102, 255, 0.2);
-  color: var(--foreground);
-}
-
-/* Focus visible styles */
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* Button reset */
-button {
-  cursor: pointer;
-}
-
-/* Input reset */
-input {
-  background: transparent;
-}
-
-/* Ensure images don't overflow */
-img {
-  max-width: 100%;
-  height: auto;
+input:focus {
+  outline: none;
 }
