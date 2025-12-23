@@ -1,11 +1,2 @@
-export { Container } from './Container';
-export { Button } from './Button';
-export { FloatingCard, ProgressCard, BalanceCard, ProfileCard, CalculatorCard } from './FloatingCard';
-export { Navbar } from './Navbar';
-export { HeroSection } from './HeroSection';
-export { CryptoSection } from './CryptoSection';
-export { PhoneSection } from './PhoneSection';
-export { GrowthSection } from './GrowthSection';
-export { LandscapeSection } from './LandscapeSection';
-export { SpaceBanner } from './SpaceBanner';
-export { Footer } from './Footer';
+// Components have been moved to page.tsx for simplicity
+export {};
