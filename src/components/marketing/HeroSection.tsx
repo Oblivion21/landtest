@@ -1,21 +1,118 @@
 'use client';
 
 import { Navbar } from './Navbar';
-import { ProgressCard, BalanceCard, ProfileCard, CalculatorCard } from './FloatingCard';
 import { Button } from './Button';
+
+// Progress Card
+function ProgressCard() {
+  return (
+    <div className="glass-card rounded-2xl p-4 shadow-lg animate-float w-[160px]">
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+            <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <span className="text-xs text-gray-500">Progress</span>
+        </div>
+        <p className="text-sm font-semibold text-gray-800">Track<br/>Your Progress</p>
+        <div className="flex items-center gap-1">
+          <span className="text-lg font-bold text-green-500">+59%</span>
+          <span className="text-xs text-gray-400">growth</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Balance Card
+function BalanceCard() {
+  return (
+    <div className="glass-card rounded-2xl p-4 shadow-lg animate-float-delayed w-[180px]">
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+            <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span className="text-xs text-gray-500">Crypto</span>
+        </div>
+        <p className="text-sm text-gray-600">Track your<br/>crypto journey<br/>effortlessly</p>
+        <p className="text-xl font-bold text-gray-800">$12,450.00 <span className="text-xs font-normal text-gray-400">Assets</span></p>
+      </div>
+    </div>
+  );
+}
+
+// Profile Card
+function ProfileCard() {
+  return (
+    <div className="glass-card rounded-2xl p-4 shadow-lg animate-float-slow w-[160px]">
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+            <span className="text-xs text-white font-semibold">S</span>
+          </div>
+          <span className="text-xs text-gray-500">Profile</span>
+        </div>
+        <p className="text-sm font-medium text-gray-800">Hi, Sam</p>
+        <p className="text-xs text-gray-500">Account Wallet</p>
+        <p className="text-lg font-bold text-gray-800">$5,921.20</p>
+      </div>
+    </div>
+  );
+}
+
+// Calculator Card
+function CalculatorCard() {
+  return (
+    <div className="glass-card rounded-2xl p-4 shadow-lg animate-float-delayed w-[140px]">
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <div className="h-6 w-6 rounded bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+            <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span className="text-xs text-gray-500">Calculator</span>
+        </div>
+        <div className="flex gap-1">
+          <div className="h-6 w-6 rounded bg-gray-100"></div>
+          <div className="h-6 w-6 rounded bg-gray-100"></div>
+          <div className="h-6 w-6 rounded bg-gray-100"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Hero Frame Container */}
       <div className="hero-frame relative mx-4 sm:mx-8 lg:mx-16 mt-4">
-        {/* Cloud/Sky Background with gradient */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2387CEEB'/%3E%3Cstop offset='100%25' style='stop-color:%23E0F4FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23sky)' width='1000' height='600'/%3E%3Cellipse cx='200' cy='150' rx='120' ry='60' fill='white' opacity='0.8'/%3E%3Cellipse cx='250' cy='140' rx='80' ry='50' fill='white' opacity='0.9'/%3E%3Cellipse cx='700' cy='100' rx='150' ry='70' fill='white' opacity='0.7'/%3E%3Cellipse cx='800' cy='200' rx='100' ry='50' fill='white' opacity='0.6'/%3E%3C/svg%3E")`
-          }}
-        />
+        {/* Clouds Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Cloud 1 - Top left */}
+          <div className="absolute top-[10%] left-[5%] w-40 h-20 bg-white/60 rounded-full blur-xl" />
+          <div className="absolute top-[8%] left-[8%] w-32 h-16 bg-white/70 rounded-full blur-lg" />
+
+          {/* Cloud 2 - Top right */}
+          <div className="absolute top-[5%] right-[10%] w-48 h-24 bg-white/50 rounded-full blur-xl" />
+          <div className="absolute top-[8%] right-[15%] w-36 h-18 bg-white/60 rounded-full blur-lg" />
+
+          {/* Cloud 3 - Middle left */}
+          <div className="absolute top-[30%] left-[-5%] w-56 h-28 bg-white/40 rounded-full blur-2xl" />
+
+          {/* Cloud 4 - Middle right */}
+          <div className="absolute top-[25%] right-[-5%] w-52 h-26 bg-white/45 rounded-full blur-2xl" />
+
+          {/* Cloud 5 - Near portrait */}
+          <div className="absolute top-[40%] left-[20%] w-32 h-16 bg-white/50 rounded-full blur-xl" />
+          <div className="absolute top-[35%] right-[20%] w-36 h-20 bg-white/45 rounded-full blur-xl" />
+        </div>
 
         {/* Navigation */}
         <div className="relative z-20">
@@ -51,7 +148,7 @@ export function HeroSection() {
 
           {/* Rating */}
           <div className="flex items-center gap-2 mt-10">
-            <span className="text-sm text-gray-600">Rated 4.9/5 by 2500+ customers</span>
+            <span className="text-sm text-gray-600">Rated 4.9/5 by 2100+ customers</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="h-4 w-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -71,30 +168,122 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Portrait Placeholder - positioned at bottom center */}
+        {/* Portrait - Woman with glasses */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
           <div className="relative">
-            {/* Portrait placeholder */}
-            <div className="w-[280px] sm:w-[350px] lg:w-[400px] h-[300px] sm:h-[380px] lg:h-[450px] rounded-t-full bg-gradient-to-b from-blue-200/50 to-transparent overflow-hidden">
-              {/* Silhouette placeholder */}
-              <svg viewBox="0 0 400 500" className="w-full h-full" preserveAspectRatio="xMidYMax slice">
+            <div className="w-[280px] sm:w-[350px] lg:w-[420px] h-[320px] sm:h-[400px] lg:h-[480px] overflow-hidden">
+              <svg viewBox="0 0 420 500" className="w-full h-full" preserveAspectRatio="xMidYMax slice">
                 <defs>
-                  <linearGradient id="portraitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#4a90a4" stopOpacity="0.8"/>
-                    <stop offset="100%" stopColor="#2d5a6b" stopOpacity="0.9"/>
+                  <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#c4a98f"/>
+                    <stop offset="50%" stopColor="#b89a7d"/>
+                    <stop offset="100%" stopColor="#a88b6e"/>
+                  </linearGradient>
+                  <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#2d1810"/>
+                    <stop offset="50%" stopColor="#3d2518"/>
+                    <stop offset="100%" stopColor="#2a1508"/>
+                  </linearGradient>
+                  <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#4a9ead"/>
+                    <stop offset="100%" stopColor="#3d8494"/>
+                  </linearGradient>
+                  <radialGradient id="eyeGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#8B4513"/>
+                    <stop offset="70%" stopColor="#654321"/>
+                    <stop offset="100%" stopColor="#3d2914"/>
+                  </radialGradient>
+                  <linearGradient id="glassesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#87CEEB" stopOpacity="0.3"/>
+                    <stop offset="100%" stopColor="#ADD8E6" stopOpacity="0.2"/>
                   </linearGradient>
                 </defs>
-                {/* Head and shoulders silhouette */}
-                <ellipse cx="200" cy="140" rx="75" ry="90" fill="url(#portraitGrad)"/>
-                <ellipse cx="200" cy="350" rx="140" ry="180" fill="url(#portraitGrad)"/>
-                {/* Hair accent */}
-                <path d="M125 100 Q200 20 275 100 Q280 140 275 160 Q200 80 125 160 Q120 140 125 100" fill="#2d3748" opacity="0.7"/>
-                {/* Glasses */}
-                <g fill="none" stroke="#1a202c" strokeWidth="3">
-                  <ellipse cx="165" cy="130" rx="30" ry="25"/>
-                  <ellipse cx="235" cy="130" rx="30" ry="25"/>
-                  <line x1="195" y1="130" x2="205" y2="130"/>
+
+                {/* Curly Hair - Back */}
+                <g fill="url(#hairGrad)">
+                  {/* Large curls on left side */}
+                  <circle cx="115" cy="120" r="45"/>
+                  <circle cx="95" cy="160" r="40"/>
+                  <circle cx="80" cy="210" r="38"/>
+                  <circle cx="85" cy="260" r="35"/>
+                  <circle cx="100" cy="300" r="32"/>
+                  <circle cx="120" cy="80" r="35"/>
+
+                  {/* Large curls on right side */}
+                  <circle cx="305" cy="120" r="45"/>
+                  <circle cx="325" cy="160" r="40"/>
+                  <circle cx="340" cy="210" r="38"/>
+                  <circle cx="335" cy="260" r="35"/>
+                  <circle cx="320" cy="300" r="32"/>
+                  <circle cx="300" cy="80" r="35"/>
+
+                  {/* Top hair curls */}
+                  <circle cx="150" cy="55" r="30"/>
+                  <circle cx="190" cy="40" r="32"/>
+                  <circle cx="230" cy="38" r="34"/>
+                  <circle cx="270" cy="45" r="30"/>
+                  <circle cx="210" cy="55" r="28"/>
                 </g>
+
+                {/* Face */}
+                <ellipse cx="210" cy="200" rx="90" ry="110" fill="url(#skinGrad)"/>
+
+                {/* Neck */}
+                <path d="M170 290 Q170 350 180 400 L240 400 Q250 350 250 290" fill="url(#skinGrad)"/>
+
+                {/* Shirt/Shoulders */}
+                <path d="M100 400 Q120 380 180 390 L240 390 Q300 380 320 400 L340 500 L80 500 Z" fill="url(#shirtGrad)"/>
+
+                {/* Curly Hair - Front overlay */}
+                <g fill="url(#hairGrad)">
+                  <circle cx="140" cy="100" r="25"/>
+                  <circle cx="280" cy="100" r="25"/>
+                  <circle cx="160" cy="75" r="20"/>
+                  <circle cx="260" cy="75" r="20"/>
+                </g>
+
+                {/* Eyebrows */}
+                <path d="M150 155 Q170 148 190 155" fill="none" stroke="#3d2518" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M230 155 Q250 148 270 155" fill="none" stroke="#3d2518" strokeWidth="3" strokeLinecap="round"/>
+
+                {/* Eyes */}
+                <g>
+                  {/* Left eye */}
+                  <ellipse cx="170" cy="175" rx="18" ry="12" fill="white"/>
+                  <circle cx="172" cy="175" r="8" fill="url(#eyeGrad)"/>
+                  <circle cx="174" cy="173" r="3" fill="white"/>
+                  <circle cx="170" cy="176" r="2" fill="#000"/>
+
+                  {/* Right eye */}
+                  <ellipse cx="250" cy="175" rx="18" ry="12" fill="white"/>
+                  <circle cx="248" cy="175" r="8" fill="url(#eyeGrad)"/>
+                  <circle cx="250" cy="173" r="3" fill="white"/>
+                  <circle cx="246" cy="176" r="2" fill="#000"/>
+                </g>
+
+                {/* Glasses */}
+                <g fill="none" stroke="#1a365d" strokeWidth="3">
+                  {/* Left lens frame */}
+                  <ellipse cx="170" cy="175" rx="35" ry="28" fill="url(#glassesGrad)"/>
+                  {/* Right lens frame */}
+                  <ellipse cx="250" cy="175" rx="35" ry="28" fill="url(#glassesGrad)"/>
+                  {/* Bridge */}
+                  <path d="M205 175 L215 175" strokeWidth="2"/>
+                  {/* Temple arms */}
+                  <path d="M135 168 L100 155" strokeWidth="2"/>
+                  <path d="M285 168 L320 155" strokeWidth="2"/>
+                </g>
+
+                {/* Nose */}
+                <path d="M210 180 Q215 210 210 230 Q205 235 210 240" fill="none" stroke="#a88b6e" strokeWidth="2" strokeLinecap="round"/>
+
+                {/* Lips */}
+                <path d="M185 265 Q210 275 235 265" fill="none" stroke="#c27070" strokeWidth="4" strokeLinecap="round"/>
+                <path d="M190 267 Q210 258 230 267" fill="none" stroke="#d48888" strokeWidth="3" strokeLinecap="round"/>
+
+                {/* Subtle smile lines */}
+                <path d="M180 260 Q175 265 178 272" fill="none" stroke="#b89a7d" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                <path d="M240 260 Q245 265 242 272" fill="none" stroke="#b89a7d" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
               </svg>
             </div>
           </div>
@@ -102,19 +291,19 @@ export function HeroSection() {
 
         {/* Floating Cards */}
         <div className="hidden lg:block">
-          <div className="absolute top-[35%] left-[8%] z-20">
+          <div className="absolute top-[32%] left-[6%] z-20">
             <ProgressCard />
           </div>
 
-          <div className="absolute top-[40%] left-[25%] z-20">
+          <div className="absolute top-[42%] left-[22%] z-20">
             <BalanceCard />
           </div>
 
-          <div className="absolute top-[35%] right-[25%] z-20">
+          <div className="absolute top-[32%] right-[22%] z-20">
             <ProfileCard />
           </div>
 
-          <div className="absolute top-[45%] right-[8%] z-20">
+          <div className="absolute top-[45%] right-[6%] z-20">
             <CalculatorCard />
           </div>
         </div>

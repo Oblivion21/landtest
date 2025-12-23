@@ -4,9 +4,35 @@ import { Container } from './Container';
 
 export function PhoneSection() {
   return (
-    <section className="py-16 tech-pattern">
+    <section className="py-16 tech-pattern relative">
       <Container>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center relative">
+          {/* Decorative elements */}
+          <div className="absolute -left-8 top-1/4 opacity-20 hidden sm:block">
+            <svg className="h-10 w-10 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+
+          <div className="absolute -right-8 top-1/3 opacity-20 hidden sm:block">
+            <svg className="h-8 w-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+
+          <div className="absolute -left-12 bottom-1/4 opacity-20 hidden sm:block">
+            <svg className="h-7 w-7 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+
+          <div className="absolute -right-12 bottom-1/3 opacity-20 hidden sm:block">
+            <svg className="h-9 w-9 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+
           {/* Phone Mockup */}
           <div className="relative">
             {/* Phone Frame */}
@@ -32,7 +58,7 @@ export function PhoneSection() {
 
                   {/* Portfolio Name */}
                   <div className="space-y-1">
-                    <p className="text-sm text-gray-500">VaultX'35</p>
+                    <p className="text-sm text-gray-500">VaultX&apos;35</p>
                     <p className="text-xs text-gray-400">Global Crypto Portfolio</p>
                   </div>
 
@@ -52,7 +78,7 @@ export function PhoneSection() {
                     </button>
                   </div>
 
-                  {/* Chart placeholder */}
+                  {/* Chart */}
                   <div className="h-24 bg-gradient-to-r from-blue-50 via-cyan-50 to-blue-50 rounded-xl flex items-end justify-around px-2 pb-2">
                     {[40, 60, 45, 80, 55, 70, 90].map((height, i) => (
                       <div
@@ -64,24 +90,6 @@ export function PhoneSection() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Decorative elements around phone */}
-            <div className="absolute -left-16 top-1/4 text-gray-300 opacity-50">
-              <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <div className="absolute -right-16 top-1/3 text-gray-300 opacity-50">
-              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <div className="absolute -left-12 bottom-1/4 text-gray-300 opacity-50">
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
             </div>
           </div>
         </div>
